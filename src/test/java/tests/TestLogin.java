@@ -2,14 +2,12 @@
 
 package tests;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
@@ -19,7 +17,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import pageobjects.Login;
 
 import javax.swing.table.TableRowSorter;
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.List;
 
 public class TestLogin {
@@ -45,6 +47,7 @@ public class TestLogin {
         String rightClickBtnMessage = driver.findElement(By.id("rightClickMessage")).getText();
         System.out.println("\n right click message " + rightClickBtnMessage);
         Assert.assertTrue(rightClickBtnMessage.contains("You have done a right click"));
+
 
     }
 
@@ -119,6 +122,23 @@ public class TestLogin {
         driver.findElement(By.id("react-select-4-option-2")).click();
         driver.findElement(By.id("react-select-4-option-3")).click();
         Thread.sleep(3000);
+
+
+
+    }
+
+    @Test
+    public void takeScreenshot() throws IOException {
+        driver.get("https://demoqa.com");
+        // File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        File screenshotFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+        //capturing date
+        String time = new SimpleDateFormat("dd-MM-yyyy-hh-mm-ss-aa").format(new Date());
+
+        String fileWithPath = "./src/test/resources/screenshots/" + time + ".png";
+        File DestFile = new File(fileWithPath);
+        FileUtils.copyFile(screenshotFile, DestFile);
 
 
 
