@@ -110,17 +110,26 @@ public class TestLogin {
     }
 
     @Test
-    public void selecMultiItem() throws InterruptedException {
+    public void selectMultiItem() throws InterruptedException {
         login.visit("https://demoqa.com/select-menu");
         login.maximizeWindow();
         JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("window.scroll(0, 450)");
-        Thread.sleep(3000);
+        jse.executeScript("window.scroll(0, 550)");
         driver.findElement(By.xpath("//div[@class='row']/*/div[@class=' css-2b097c-container']")).click();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
         driver.findElement(By.id("react-select-4-option-0")).click();
         driver.findElement(By.id("react-select-4-option-1")).click();
         driver.findElement(By.id("react-select-4-option-2")).click();
         driver.findElement(By.id("react-select-4-option-3")).click();
+        List <WebElement> colors = driver.findElements(By.cssSelector("div.css-1rhbuit-multiValue"));
+
+        for(WebElement e: colors) {
+
+            System.out.println(colors.size());
+            System.out.println( e.getText() );
+        }
+
         Thread.sleep(3000);
 
 

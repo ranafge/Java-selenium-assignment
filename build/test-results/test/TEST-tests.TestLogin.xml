@@ -1,41 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.TestLogin" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-01-04T15:00:42" hostname="DESKTOP-3K5QDPF" time="199.531">
+<testsuite name="tests.TestLogin" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-01-06T04:27:01" hostname="DESKTOP-3K5QDPF" time="17.582">
   <properties/>
-  <testcase name="SelectMultipoleElementDropDownMenu" classname="tests.TestLogin" time="49.111"/>
-  <testcase name="acceptCookies" classname="tests.TestLogin" time="23.01"/>
-  <testcase name="selectDropdown" classname="tests.TestLogin" time="46.315"/>
-  <testcase name="rightClickButton" classname="tests.TestLogin" time="22.983"/>
-  <testcase name="selecMultiItem" classname="tests.TestLogin" time="25.317"/>
-  <testcase name="handleAlert" classname="tests.TestLogin" time="32.795"/>
-  <system-out><![CDATA[
- right click message You have done a right click
-Alert window message is: Do you confirm action?
-Alter message is:  You selected Ok
+  <testcase name="selectMultiItem" classname="tests.TestLogin" time="17.582"/>
+  <system-out><![CDATA[4
+Green
+4
+Blue
+4
+Black
+4
+Red
 ]]></system-out>
   <system-err><![CDATA[SLF4J: No SLF4J providers were found.
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
-Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 45858
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 14977
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 41721
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 47402
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 13292
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 27086
+Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 29510
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
